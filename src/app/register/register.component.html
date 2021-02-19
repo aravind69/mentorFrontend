@@ -1,0 +1,107 @@
+﻿
+<!-- Material form register -->
+<!-- <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+  
+      <form class="example-form"  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  
+        <mat-card-content>
+            <mat-form-field class="example-full-width">
+                <mat-label>Choose designation</mat-label>
+                <mat-select [(value)]="selected" formControlName="userType">
+                   
+                    <mat-option value="Mentor">Mentor</mat-option>
+                    <mat-option value="Student">Student</mat-option>
+                    <mat-option value="Admin">Admin</mat-option>
+                  </mat-select>
+              </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" formControlName="username">
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Phone No" formControlName="phoneNo">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Confirm Password" formControlName="confirmpassword">
+          </mat-form-field>
+          
+  
+        </mat-card-content>
+  
+        <button mat-stroked-button color="accent" class="btn-block">Register</button>
+  
+      </form>
+    </mat-card>
+  </div> -->
+  <!-- Material form register -->
+<h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="userType">User Type</label>
+        <!-- <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" /> -->
+        <select formControlName="userType"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+            <option value="Mentor">Mentor</option>
+            <option value="Student">Student</option>
+            <!-- <option value="">Admin</option> -->
+            
+         </select>
+        <div *ngIf="submitted && f.userType.errors" class="invalid-feedback">
+            <div *ngIf="f.userType.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="userName">User Name</label>
+        <input type="text" formControlName="userName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+            <div *ngIf="f.userName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="phoneNo">phoneNo</label>
+        <input type="text" formControlName="phoneNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.phoneNo.errors" class="invalid-feedback">
+            <div *ngIf="f.phoneNo.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" formControlName="confirmpassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.confirmpassword.errors" class="invalid-feedback">
+            <div *ngIf="f.confirmpassword.errors.required">Password is required</div>
+            <div *ngIf="f.confirmpassword.errors.mustMatch">Passwords must match</div>
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+        </button>
+        <a routerLink="/login" class="btn btn-link">Cancel</a>
+    </div>
+</form>
