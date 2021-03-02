@@ -45,6 +45,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchMentorComponent } from './search-mentor/search-mentor.component';
 import { CreatecorseComponent } from './createcorse/createcorse.component';
 import { TokenInterceptor } from './_services/token.interceptor';
+import { CollabrationComponent } from './collabration/collabration.component';
 //import { CreateOrderComponent } from './orders/create-order/create-order.component';
 
 @NgModule({
@@ -82,7 +83,8 @@ import { TokenInterceptor } from './_services/token.interceptor';
     StudentSignupComponent,
     RegisterComponent,
     SearchMentorComponent,
-    CreatecorseComponent
+    CreatecorseComponent,
+    CollabrationComponent
 
   ],
   providers: [
