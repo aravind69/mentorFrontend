@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-=======
 import {FormGroup,FormBuilder,Validators} from '@angular/forms'
 import { AlertService, UserService, AuthenticationService } from 'app/_services';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { FileuploaderService } from 'app/_services/fileuploader.service';
->>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
 
 @Component({
   selector: 'app-user-profile',
@@ -14,12 +11,6 @@ import { FileuploaderService } from 'app/_services/fileuploader.service';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-<<<<<<< HEAD
-
-  constructor() { }
-
-  ngOnInit() {
-=======
  mentorprofile:FormGroup;
  userName:string;
  loading = false;
@@ -122,7 +113,6 @@ onFileUpload() {
         });
       }
     });
->>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
   }
 
 }

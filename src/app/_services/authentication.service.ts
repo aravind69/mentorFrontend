@@ -15,9 +15,6 @@ export class AuthenticationService {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.currentUser = this.currentUserSubject.asObservable();
     }
-<<<<<<< HEAD
-
-=======
     public get userValue(): User {
         return this.currentUserSubject.value;
     }
@@ -33,7 +30,6 @@ export class AuthenticationService {
         // whether or not the token is expired
        // return tokenNotExpired(null, token);
       }
->>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
     public get currentUserValue(): User {
         return this.currentUserSubject.value;
     }
