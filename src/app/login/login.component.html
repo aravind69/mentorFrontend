@@ -1,23 +1,62 @@
-<mat-card>
-    <mat-card-content>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <h2>Log In</h2>
-        <mat-error>
-          The username and password were not recognised
-        </mat-error>
-        <mat-form-field class="full-width-input">
-          <input matInput placeholder="Email" formControlName="username" required>
-          <mat-error>
-            Please provide a valid email address
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="full-width-input">
-          <input matInput type="password" placeholder="Password" formControlName="password" required>
-          <mat-error>
-            Please provide a valid password
-          </mat-error>
-        </mat-form-field>
-        <button mat-raised-button color="primary">Login</button>
-      </form>
-    </mat-card-content>
-  </mat-card>
+<div class="container d-flex flex-column">
+  <div class="row align-items-center justify-content-center no-gutters min-vh-100">
+    <div class="col-lg-5 col-md-8 py-8 py-xl-0">
+      <!-- Card -->
+      <div class="card shadow ">
+        <!-- Card body -->
+        <div class="card-body p-6">
+          <div class="mb-4">
+            <h3 class="mb-1 font-weight-bold">Sign in</h3>
+            <span>Don’t have an account? <a href="" class="ml-1">Sign up</a></span>
+          </div>
+          <!-- Form -->
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <!-- Username -->
+            <div class="form-group">
+              <label for="email" class="form-label">Username or email</label>
+              <input type="email" id="email" class="form-control" name="email" placeholder="Enter Email" required="">
+            </div>
+              <!-- Password -->
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-control" name="password" placeholder="Enter Password" required="">
+            </div>
+              <!-- Checkbox -->
+            <div class="d-lg-flex justify-content-between align-items-center mb-4">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="rememberme">
+                <label class="custom-control-label " for="rememberme">Remember me</label>
+              </div>
+              <div>
+                <a href="">Forgot your password?</a>
+              </div>
+            </div>
+            <div>
+                <!-- Button -->
+              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            </div>
+            <hr class="my-4">
+            <div class="mt-4 text-center">
+              <!--Facebook-->
+              <a href="#!" class="btn-social btn-social-outline btn-facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <!--Twitter-->
+              <a href="#!" class="btn-social btn-social-outline btn-twitter">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <!--LinkedIn-->
+              <a href="#!" class="btn-social btn-social-outline btn-linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <!--GitHub-->
+              <a href="#!" class="btn-social btn-social-outline btn-github">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

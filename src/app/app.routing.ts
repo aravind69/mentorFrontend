@@ -8,6 +8,7 @@ import { LandinglayoutComponent } from './landinglayout/landinglayout.component'
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchMentorComponent } from './search-mentor/search-mentor.component';
+import { CreatecorseComponent } from './createcorse/createcorse.component';
 
 const routes: Routes =[
   {
@@ -19,6 +20,7 @@ const routes: Routes =[
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'findmentor', component: SearchMentorComponent },
+  { path: 'createcorse', component: CreatecorseComponent },
   {
     path: '',
     component: AdminLayoutComponent,

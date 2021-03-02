@@ -43,6 +43,7 @@ import { LoginComponent } from './login/login.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchMentorComponent } from './search-mentor/search-mentor.component';
+import { CreatecorseComponent } from './createcorse/createcorse.component';
 //import { CreateOrderComponent } from './orders/create-order/create-order.component';
 
 @NgModule({
@@ -79,7 +80,8 @@ import { SearchMentorComponent } from './search-mentor/search-mentor.component';
     LoginComponent,
     StudentSignupComponent,
     RegisterComponent,
-    SearchMentorComponent
+    SearchMentorComponent,
+    CreatecorseComponent
     
 
   ],

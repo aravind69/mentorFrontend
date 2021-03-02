@@ -22,7 +22,6 @@
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "src/assets/scss/material-dashboard.scss",
               "src/assets/css/demo.css"
             ],
             "scripts": [
@@ -92,7 +91,6 @@
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "src/assets/scss/material-dashboard.scss",
               "src/assets/css/demo.css"
             ],
             "assets": [
@@ -141,7 +139,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
-      "styleext": "scss"
+      "styleext": "css"
     },
     "@schematics/angular:directive": {
       "prefix": "app"
