@@ -2,7 +2,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+<<<<<<< HEAD
 import {HttpClientModule} from '@angular/common/http'
+=======
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { MatMenuModule} from '@angular/material/menu';
@@ -42,8 +46,12 @@ import { LandinglayoutComponent } from './landinglayout/landinglayout.component'
 import { LoginComponent } from './login/login.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { RegisterComponent } from './register/register.component';
+<<<<<<< HEAD
 import { SearchMentorComponent } from './search-mentor/search-mentor.component';
 import { CreatecorseComponent } from './createcorse/createcorse.component';
+=======
+import { TokenInterceptor } from './_services/token.interceptor';
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
 //import { CreateOrderComponent } from './orders/create-order/create-order.component';
 
 @NgModule({
@@ -79,6 +87,7 @@ import { CreatecorseComponent } from './createcorse/createcorse.component';
     LandinglayoutComponent,
     LoginComponent,
     StudentSignupComponent,
+<<<<<<< HEAD
     RegisterComponent,
     SearchMentorComponent,
     CreatecorseComponent
@@ -86,6 +95,19 @@ import { CreatecorseComponent } from './createcorse/createcorse.component';
 
   ],
   providers: [],
+=======
+    RegisterComponent
+    
+
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
   bootstrap: [AppComponent]
 })
 export class AppModule { }

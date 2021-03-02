@@ -17,6 +17,10 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+<<<<<<< HEAD
+=======
+//import { FileUploaderServiceService } from 'app/_services/file-uploader-service.service.';
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
 
 @NgModule({
   imports: [
@@ -40,6 +44,12 @@ import {MatSelectModule} from '@angular/material/select';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+<<<<<<< HEAD
+=======
+  ],
+  providers:[
+    
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
   ]
 })
 

@@ -22,6 +22,10 @@
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+<<<<<<< HEAD
+=======
+              "src/assets/scss/material-dashboard.scss",
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
               "src/assets/css/demo.css"
             ],
             "scripts": [
@@ -91,6 +95,10 @@
             ],
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+<<<<<<< HEAD
+=======
+              "src/assets/scss/material-dashboard.scss",
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
               "src/assets/css/demo.css"
             ],
             "assets": [
@@ -139,7 +147,11 @@
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
+<<<<<<< HEAD
       "styleext": "css"
+=======
+      "styleext": "scss"
+>>>>>>> 1153608bcb747cc8301a8747e89d3db38581f278
     },
     "@schematics/angular:directive": {
       "prefix": "app"
