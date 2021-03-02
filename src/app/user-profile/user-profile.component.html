@@ -8,57 +8,62 @@
                       <p class="card-category">Complete your profile</p>
                   </div>
                   <div class="card-body">
-                      <form>
+                      <form [formGroup]="mentorprofile" (ngSubmit)="onSubmit()" novalidate>
                           <div class="row">
                               <div class="col-md-5">
                                 <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Company (disabled)" disabled>
+                                    <input matInput placeholder="user Name" formControlName="userName" required>
                                   </mat-form-field>
                               </div>
                               <div class="col-md-3">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Username">
+                                    <input matInput placeholder="Email" type="email" formControlName="email" required>
                                   </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                   <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Email address" type="email">
+                                    <input matInput placeholder="phone No" formControlName="phoneNo" required>
                                   </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Fist Name" type="text">
+                                  <input matInput placeholder="Qualification" type="text" formControlName="qualification">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Last Name" type="text">
+                                  <input matInput placeholder="Experience" type="text" formControlName="experience">
                                 </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
-                              <div class="col-md-12">
+                              <div class="col-md-6">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Adress" type="text">
+                                  <input matInput placeholder="Adress" type="text" formControlName="addressline">
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="City" type="text" formControlName="city">
                                 </mat-form-field>
                               </div>
                           </div>
                           <div class="row">
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="City" type="text">
+                                  <input matInput placeholder="State" type="text" formControlName="state">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Country" type="text">
+                                  <input matInput placeholder="Country" type="text" formControlName="country">
                                 </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Postal Code" type="text">
+                                  <input matInput placeholder="Postal Code" type="text" formControlName="zipcode">
                                 </mat-form-field>
                               </div>
                           </div>
@@ -66,7 +71,7 @@
                               <div class="col-md-12">
                                 <label>About Me</label>
                                 <mat-form-field class="example-full-width">
-                                   <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."></textarea>
+                                   <textarea matInput placeholder="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo." formControlName="aboutMe"></textarea>
                                  </mat-form-field>
                                   <!-- <div class="form-group">
 
@@ -84,12 +89,20 @@
               </div>
           </div>
           <div class="col-md-4">
+            <div class="main">
+              <input (change)="onFilePicked($event)" class="custom-file-input"
+                     placeholder="Upload File" type="file" />
+              <button (click)="onFileUpload()" class="myButton">Upload File</button>
+              <p *ngIf="errorMsg"> Please Select file</p>
+            </div>
               <div class="card card-profile">
                   <div class="card-avatar">
                       <a href="javascript:void(0)">
-                          <img class="img" src="./assets/img/faces/marc.jpg" />
+                          <img class="img" src={{imageUrls}}/>
                       </a>
+                      
                   </div>
+                  
                   <div class="card-body">
                       <h6 class="card-category text-gray">CEO / Co-Founder</h6>
                       <h4 class="card-title">Alec Thompson</h4>
