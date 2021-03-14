@@ -15,7 +15,10 @@ import { MatInputModule} from '@angular/material/input';
 import { MatCardModule} from '@angular/material/card';
 import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MatSelectModule} from '@angular/material/select';
+import { MatGridListModule} from '@angular/material/grid-list';
+import {MatSidenavModule } from '@angular/material/sidenav';
 
+import {SignalingService } from 'app/_services/signaling.service';
 
 
 import { AppRoutingModule } from './app.routing';
@@ -46,6 +49,7 @@ import { SearchMentorComponent } from './search-mentor/search-mentor.component';
 import { CreatecorseComponent } from './createcorse/createcorse.component';
 import { TokenInterceptor } from './_services/token.interceptor';
 import { CollabrationComponent } from './collabration/collabration.component';
+import { ChatComponent } from './chat/chat.component';
 //import { CreateOrderComponent } from './orders/create-order/create-order.component';
 
 @NgModule({
@@ -69,6 +73,8 @@ import { CollabrationComponent } from './collabration/collabration.component';
     MatSlideToggleModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    MatGridListModule,
+    MatSidenavModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     })
@@ -84,7 +90,8 @@ import { CollabrationComponent } from './collabration/collabration.component';
     RegisterComponent,
     SearchMentorComponent,
     CreatecorseComponent,
-    CollabrationComponent
+    CollabrationComponent,
+    ChatComponent
 
   ],
   providers: [
@@ -92,7 +99,9 @@ import { CollabrationComponent } from './collabration/collabration.component';
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }
+      
+    },
+    SignalingService
   ],
   bootstrap: [AppComponent]
 })

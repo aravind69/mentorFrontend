@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchMentorComponent } from './search-mentor/search-mentor.component';
 import { CreatecorseComponent } from './createcorse/createcorse.component';
 import { CollabrationComponent } from './collabration/collabration.component';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes =[
   {
@@ -23,6 +24,7 @@ const routes: Routes =[
   { path: 'findmentor', component: SearchMentorComponent },
   { path: 'createcorse', component: CreatecorseComponent },
   { path: 'collabrate', component: CollabrationComponent },
+  { path: 'chat', component: ChatComponent },
   {
     path: '',
     component: AdminLayoutComponent,

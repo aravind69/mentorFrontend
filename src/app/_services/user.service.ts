@@ -19,7 +19,7 @@ export class UserService {
     }
 
     register(user: User) {
-        debugger;
+       
         return this.http.post(`${GlobalConstants.apiURL}/mentorUsers/register`, user);
     }
 
